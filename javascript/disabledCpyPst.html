@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disabled Copy Pate Functionality</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">
+            <form action="">
+                <lebel id="showData">Enter You Password</lebel><br>
+                <input type="password" id="textData" placeholder="password" oncopy="return false"
+                    onpaste="return false"><br>
+                <lebel id="showData">Confirm Password</lebel><br>
+                <input type="password" id="textData" placeholder="confirm password" oncopy="return false"
+                    onpaste="return false">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

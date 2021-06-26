@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./project/link/fontawesome-free-5.15.2-web/css/all.min.css">
+    <title>Instagram like functionality</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .center img {
+            width: 40rem;
+            height: 60rem;
+            box-shadow: 0 1rem 2rem .8rem rgba(0, 0, 0, 0.2);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .center i {
+            position: absolute;
+            color: red;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: heart 0.8s linear;
+        }
+
+        @keyframes heart {
+            100% {
+                transform: scale(12);
+                opacity: 0;
+            }
+        }
+
+        .count {
+            color: #ee5253;
+        }
+
+        .main h1 {
+            font-size: 3.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>I am like <span class="count"> </span> times 😍</h1>
+        <div class="center">
+            <img src="ali.jpg" alt="img">
+        </div>
+    </div>
+    <script>
+        const clickArea = document.querySelector('.center');
+        const count = document.querySelector('.count');
+        let likeCount = 0;
+        const showHeart = (e) => {
+            // <i class="fas fa-heart fa-4x"></i>
+            const heart = document.createElement('i');
+            heart.classList.add('fas');
+            heart.classList.add('fa-heart');
+            heart.classList.add('fa-4x');
+            clickArea.appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 800);
+
+        }
+        clickArea.addEventListener('click', (e) => {
+            count.innerHTML = ++likeCount;
+            showHeart(e);
+        });
+    </script>
+</body>
+
+</html>

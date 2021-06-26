@@ -1,0 +1,11 @@
+{
+    {
+        name:'Hayder',
+        age : 55;
+    },
+
+    {
+        name:'Aly',
+        age : 34;
+    }
+}

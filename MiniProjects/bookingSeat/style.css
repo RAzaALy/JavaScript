@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./Poppins/Poppins-Medium.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #242333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+h1 {
+  position: fixed;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: xx-large;
+}
+h2{
+    margin-bottom: 1rem;
+}
+.movie-container {
+  margin: 2rem 0;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.movie-container select:focus {
+  outline: none;
+}
+.container {
+  perspective: 100rem;
+  margin-bottom: 3rem;
+}
+
+.seat {
+  background-color: #444451;
+  height: 12px;
+  width: 15px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+.seat.occupied {
+  background-color: #fff;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  color: #eee;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+}
+
+.screen {
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+  margin: 5px 0;
+  font-size: 1.4rem;
+}
+
+p.text span {
+  color: #6feaf6;
+}
+#count{
+    background-color: #eee;
+    height: 2rem;
+    width: 2rem;
+    padding: .1rem .4rem;
+    color: #242333;
+    border-radius: 50%;
+}
+@media (max-width:700px) {
+    h1{
+        font-size: 2rem;
+    }
+}

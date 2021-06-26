@@ -1,0 +1,10 @@
+console.time('Your Code taking time');
+console.log("hello world");
+console.log([2,3,4,3.3]);
+console.log({Name: "Ali Raza Jutt", age:"20 years old"});
+console.table({Name:"Ali Raza Jutt",age:"20 years old"});
+console.warn("This is warning!");
+console.error('This is error');
+// console.clear();
+console.timeEnd('Your Code taking time');
+console.assert(445<139, "age>139 is not possible");

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timing Based Events in JavaScript</title>
+  </head>
+  <body>
+    <!-- 1. ****** SetTimeOut  -->
+
+    <!-- <div class="container">
+        <div>
+            <p>Want ot know my Name </p>
+            <p id="showMyName"></p>
+            <br>
+            <button id="btn">Click Here</button>
+        </div>
+    </div> -->
+
+    <!-- <script>
+        
+        const showMyName = document.querySelector('#showMyName');
+        const btn = document.querySelector('#btn');
+        const Show = () =>{
+            showMyName.innerHTML = 'Loading ...'
+            setTimeout(()=>{
+                showMyName.innerHTML = 'Hayder Aly Jutt'
+            },1000)
+        }
+        btn.addEventListener('click',Show);
+        </script> -->
+
+
+
+
+
+
+
+
+        
+
+    <!-- //  2. ****** ClearTimeOut -->
+
+
+
+
+
+
+
+
+<!--     
+    <p>click try it wait 3 second the change will alert "Hello world"</p>
+    <p>Click Stop to preent the fist fucntion </p>
+    <p>You must click stop before the 2 second are </p>
+
+    <button id="btn">Start</button>
+    <button id="btnn">Stop</button>
+
+    
+
+    <script>
+
+        let timeRef;
+
+
+        const Start = document.querySelector('#btn').addEventListener('click', ()=>{
+            timeRef = setTimeout(() => {
+                alert('Hello World !')                
+            }, 2000);
+        });
+
+        const Stop = document.querySelector('#btnn').addEventListener('click',()=>{
+            clearTimeout(timeRef)
+        });
+
+
+    </script> -->
+
+
+
+
+
+    <!-- 3. ********** setInterval  -->
+
+
+
+
+
+
+
+
+    <div class="container">
+      <div>
+        <p class="para">Can you stop me when i reach at 5 ?</p>
+        <br />
+        <button id="btn">Click Here</button>
+        <button id="btn2">Stop Here</button>
+      </div>
+    </div>
+
+    <script>
+      const mypara = document.querySelector(".para");
+      const button = document.querySelector("#btn");
+      const button2 = document.querySelector("#btn2");
+      let timeRef;
+      let number = 0;
+
+      const stopwatch = ()=>{
+        //   mypara.innerHTML = 'Loading ...'
+          timeRef = setInterval(() => {
+            mypara.innerHTML = `${number}`
+            number++;
+          },1000);
+      }
+
+      button.addEventListener("click",stopwatch);
+
+      button2.addEventListener('click',()=>{
+          clearInterval(timeRef)
+      });
+
+    </script>
+
+
+
+  </body>
+</html>

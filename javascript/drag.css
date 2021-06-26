@@ -1,0 +1,31 @@
+body{
+    background: darkslateblue;
+}
+.imgBox{
+    background-image: url('ali.jpg');
+    position: relative;
+    top: 7px;
+    left: 5px;
+    height: 145px;
+    width: 145px;
+    cursor: pointer;
+}
+.whiteBox{
+    display: inline-block;
+    height: 155px;
+    width: 155px;
+    margin: 10px;
+    background-color: white;
+    border: 2px solid orange;
+}
+.hold
+{
+    border: 2px solid red;
+}
+.hide{
+    display: none;
+}
+.dashed{
+    background-color: lightgray;
+    border-style: dashed;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Tech Library</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div {
+        margin: 30px;
+    }
+
+    input[type='text'] {
+        width: 360px;
+    }
+
+    button[type='submit'] {
+        border: wheat;
+        background: transparent;
+        background-color: gray;
+        border-radius: 4px;
+    }
+
+    table {
+        background-color: rgb(233, 220, 220);
+    }
+</style>
+
+<body>
+
+    <h1>Tech Library</h1>
+    <div id="message"></div>
+    <hr>
+    <div class="container">
+        <form action="" id="libraryForm">
+            <h3>Please Enter the following info:</h3>
+            <div class="text">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Book name">
+            </div>
+            <div class="text">
+                <label for="author">Author</label>
+                <input type="text" id="author" placeholder="Book author">
+            </div>
+            <div id="label">
+                <label for="type" id="label">Type</label>
+                <input type="radio" name="type" id="fiction" value="fiction">
+                <label for="fiction">Fiction</label>
+                <input type="radio" name="type" id="programming" value="Programming">
+                <label for="Programming">Programming</label>
+                <input type="radio" name="type" id="funny" value="funny">
+                <label for="funny">Funny</label>
+            </div>
+            <div id="btn">
+                <button type="submit">Add Book</button>
+            </div>
+        </form>
+    </div>
+    <div id="table">
+        <h1>Your Books</h1>
+        <table class="table" border="2">
+            <thead>
+                <tr>
+
+                    <th scope="col">Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Type</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+    <!-- <script src="library.js"></script> -->
+    <script src="libraryES6.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Time</title>
+    <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "ubunt";
+      }
+
+      body {
+        background-color: #a2a36f;
+        display: grid;
+        place-items: center;
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        color: azure;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="firstChild">
+        <p>I am first Child</p>
+      </div>
+      <div class="secondChild">
+        <p>I am second Child</p>
+      </div>
+      <div class="thirdChild">
+        <p>I am third Child</p>
+      </div>
+    </div>
+
+    <a href="#" style="font: 20px black ubuntu">www.hayderaly.com</a>
+    <script>
+      // we can get data of html with document
+
+      console.log(document);
+      console.log(document.documentElement);
+      console.log(document.body.hasChildNodes());
+
+      console.log(document.head);
+      console.log(document.body);
+
+      console.log(document.body.childNodes);
+
+      console.log(document.body.children);
+
+      console.log(document.body.childElementCount);
+
+      console.log(document.body.firstElementChild);
+
+      console.log(document.body.firstElementChild.firstElementChild);
+
+      // query selector
+
+      let second = document.querySelector(".secondChild");
+
+      second.style.color = "Green";
+
+      console.log(document.body.parentNode);
+
+      console.log(document.body.nextElementSibling);
+
+      console.log(document.body.previousElementSibling);
+    </script>
+  </body>
+</html>

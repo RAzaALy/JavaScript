@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+}
+.testimonialContainer {
+  background-color: #b9c5ff;
+  color: #fff;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  padding: 5rem 8rem;
+  max-width: 668px;
+  position: relative;
+}
+.fa-quote {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 2rem;
+  position: absolute;
+  top: 6rem;
+}
+.fa-quote-right {
+  left: 4rem;
+}
+.fa-quote-left {
+  right: 4rem;
+}
+.testimonial {
+  line-height: 2.8rem;
+  text-align: justify;
+}
+.user {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user .userImg {
+  height: 6rem;
+  width: 6rem;
+  object-fit: cover;
+}
+.user .username {
+  margin: 0;
+}
+.user .role {
+  font-weight: normal;
+  margin: 1rem 0;
+}
+.userDetails {
+  margin-left: 1rem;
+}
+.progressBar {
+  background-color: #4f92ff;
+  height: 0.4rem;
+  width: 100%;
+  animation: grow 8s linear infinite;
+  transform-origin: left;
+}
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+}
+@media (max-width: 768px) {
+  .testimonialContainer {
+    padding: 2rem 3rem;
+  }
+  .fa-quote {
+    display: none;
+  }
+}

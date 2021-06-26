@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #9e9e9e;
+}
+.search {
+  position: relative;
+  height: 5rem;
+}
+.search .input {
+  background-color: #fff;
+  border: 0;
+  font-size: 1.8rem;
+  padding: 1.5rem;
+  height: 5rem;
+  width: 5rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  transition: width 0.3s ease;
+}
+.btn {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 2.4rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  width: 5rem;
+  transition: transform 0.3s ease;
+}
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+.search.active .input {
+  width: 20rem;
+}
+.search.active .btn {
+  transform: translateX(198px);
+}

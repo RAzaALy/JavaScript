@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./sweetalert/dist/sweetalert.min.js"></script>
+    <title>Pop Alert in Sweet Alert</title>
+
+</head>
+    <style>
+        #pop{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        button{
+            padding: 1rem 2rem;
+            cursor: pointer;
+        }
+    </style>
+<body>
+    <div>
+        <button onclick="popUp()" id="pop">Click Me</button>
+    </div>
+    <script>
+        function popUp() {
+            // swal("Good job!","you clikced the button!","success");
+            swal({
+                title:"Good Job!",
+                text: "You clicked the button",
+                icon:"success",
+                button:"OK"
+            });
+        }
+    </script>
+</body>
+
+</html>

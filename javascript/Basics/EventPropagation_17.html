@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Propagation</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        background-color: hsl(206, 21, 94%);
+        display: grid;
+        place-items: center;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      .center {
+        width: 40rem;
+        height: 40rem;
+        background-color: rgb(115, 198, 219);
+        display: grid;
+        place-items: center;
+      }
+
+      .ccenter {
+        width: 50%;
+        height: 50%;
+        background-color: rgb(204, 118, 103);
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- <div class="main">
+      <div class="center" onclick="func('Parent Div Call')">
+        <div class="ccenter" onclick="func('Child Div Call')"></div>
+      </div>
+    </div> -->
+
+
+    <div class="main">
+      <div class="center" id="parent">
+        <div class="ccenter" id="child"></div>
+      </div>
+    </div>
+
+    <script>
+
+    //   const func = (message) => {
+    //     alert(message);
+    //   };
+
+    // 1.  bottom to top is bubbling phase
+    // 2. top to bottom is capturing phase
+
+
+        const parent = document.getElementById('parent')
+        const child = document.getElementById('child')
+
+        const parentClass = () => {
+            alert('Parent div call ')
+            event.stopPropagation() // if it is event capturing
+            
+        }
+        const childClass = () => {
+            alert('Child div call ')
+            // event.stopPropagation() // if it is bubbling phase .
+        }
+
+        parent.addEventListener('click',parentClass,true) // if you pase the true then the phase is capturing phase so note remembered that . 
+        child.addEventListener('click',childClass,true);
+
+    </script>
+  </body>
+</html>

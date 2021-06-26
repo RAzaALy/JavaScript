@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayder Aly</title>
+    <style>
+
+        body{
+            font-family: 'ubuntu';
+            background-color: #2a364f;
+            display: grid;
+            place-items: center;
+        }
+
+        button{
+            display: inline-block;
+            background-color: #F88627;
+            color: #F4F4F4;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 10px 22px;
+            z-index: 1100;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        p,form,ul{
+            text-align: center;
+            color: rgba(255, 255, 255,0.8);
+
+        }
+
+        h1{
+            color: aquamarine;
+        }
+
+        li{
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <p class="para">Plz Like the Vedio</p>
+    <p class="para">Plz Share The vedio</p>
+    <p>Do not forget to subscribe my channel</p>
+
+    <h1 id = 'heading'>Change the Content of h1</h1>
+
+    <form action="noaction.php">
+        <label for="">Male</label>
+        <input type="radio" name="gender" id="">
+        <label for="">Female</label>
+        <input type="radio" name="gender" id="" aria-selected="false">
+        <label for="">Other</label>
+        <input type="radio" name="gender" id="">
+    </form>
+    <br><br>
+
+    <button onclick="changeContent()">Click Me</button>
+
+    <ul> 
+        <li id="web-id">Node-Js</li>
+        <li>Html</li>
+        <li class="web-class">JavaScript</li>
+        <li class="web-class">Css</li>
+    </ul>
+
+    <script>
+        const changeContent = () =>{
+
+            // document.getElementById("heading").innerHTML = 'Welcome To Hayder Blog'
+
+            // const heading = document.getElementById('heading');
+
+            // heading.innerHTML = 'Welcome to Hayder Blogs'
+        
+            // console.log(document.getElementsByClassName('para'))
+
+            // console.log(document.getElementsByTagName('p'))
+
+            // console.log(document.getElementsByName('gender'));
+
+            // matching first element or class or id and changed the data with user respect 
+
+
+
+            // document.querySelector('.para').innerHTML = 'I Changed the Again with qs'
+
+            console.log(document.querySelectorAll('.para'));
+        }
+
+        // console.log(document.getElementById('web-id').innerHTML)
+        // console.log(document.querySelector('#web-id').innerHTML)
+
+
+        console.log(document.querySelector('ul li.web-class').innerHTML)
+
+        console.log(document.querySelector('li.web-class').innerHTML)
+
+        console.log(document.querySelector('.web-class').innerHTML)
+        
+
+        
+
+    </script>
+
+</body>
+</html>

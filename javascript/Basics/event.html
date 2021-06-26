@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in javascript</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "ubuntu";
+        font-weight: 900;
+      }
+
+      .main-div {
+        width: 100vw;
+        height: 100vh;
+        /* height: auto; */
+        display: grid;
+        place-items: center;
+        background-color: #1e272e;
+        color: #fff;
+      }
+
+      input,
+      select {
+        text-align: center;
+        border: none;
+        outline: none;
+        padding: 5px;
+        margin: 25px 0;
+      }
+
+      p {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="/EventInJs_13.js"></script>
+
+    <!-- *******1. 4 ways to write event in js  -->
+
+    <!-- <a href="#" class="inline" onclick="alert('1. Inline event lets begin')"
+      >First</a
+    >
+    <a href="#" class="Callback" onclick="calling()">Second</a>
+    <a href="#" class="anonmouys" id="third">Third</a>
+    <a href="#" class="alay" id="four">Fourth</a> -->
+
+    <!-- <script>
+
+      // const third = document.getElementById("third");
+      // third.onclick = () =>{
+      //   alert('Hello this isnoew')
+      // };
+
+    </script> -->
+
+    <!-- *******2. event objects in java script  -->
+
+    <!-- <div class="container" style="width: 100vw; height: 100vh; background-color: #1e272e;font-family: ubuntu;">
+
+      <h1 style="text-align : center;">Let's See what is Event Object </h1>
+      <a href="#" id="my" style="text-align: center; display: block; width: 30vw; text-decoration: none; margin: auto; color: black; background-color: rgb(251, 255, 0) ; height: 13vh;">Event Object</a>
+
+    </div>
+
+    <script>
+      const eventobj = document.getElementById('my');
+
+      const checkEvent = () =>{
+        alert('Please Check Out this website Content with Event for Js .')
+        console.log(event)
+        console.log(event.target)
+        console.log(event.type)
+      }
+
+      eventobj.addEventListener('click',checkEvent);
+
+      
+    </script> -->
+
+    <!-- *************3 Mouse Event in JavaScript -->
+
+    <!--     
+    <p id="myp" onmousedown="mouseDown()" onmouseup="mouseUp()">
+      click the text and check the javascript mouse event in your practice so let's started my brother . Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, commodi! Sint ipsa optio quisquam nam, harum voluptate, sit temporibus magnam repellat, beatae sunt est maxime modi! Suscipit quae molestias pariatur.loremlorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae fugit, repellendus necessitatibus eius quaerat itaque, officiis totam voluptatem, quisquam nam? At, voluptatem amet. Sunt molestiae veritatis asperiores recusandae a!
+    </p> -->
+
+    <!-- <div class="main-div">
+      <div id="box"></div>
+    </div> -->
+
+    <!-- <script>
+
+        // const mouseDown = () => {
+        //   document.getElementById('myp').style.color = '#F8B627'
+        // }
+
+        // const mouseUp = () => {
+
+        //   document.getElementById('myp').style.color = '#1e272e';
+        // }
+
+        // const mEnter = document.getElementById('box');
+
+        // mEnter.addEventListener('mouseenter', () => {
+        //   mEnter.style.backgroundColor = 'red';
+        //   console.log('Mouse Enter Bro !')
+        // })
+
+        // mEnter.addEventListener('mouseleave' , () => {
+        //   console.log("Mouse Leave Bor !")
+        //   mEnter.style.backgroundColor = 'pink';
+        // });
+
+      </script> -->
+
+    <!-- *****4. KeyBoard Event in js  -->
+
+    <!-- 
+      <div class="main-div">
+        <p>A Function is triggered When the user is pressing key in the input field . </p>
+        <br>
+        <input type="text" class="effect-1" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()">
+        <br>
+        <p id="keys"></p>
+      </div> -->
+
+    <!-- <script>
+
+        const keyPress = () => {
+          document.getElementById('keys').innerHTML = `You Press ${event.key} and it's code is ${event.code}`
+
+        }
+
+        const keyDown = () =>{
+
+          document.getElementById('keys').innerHTML = 'Key Is Down'
+
+        }
+
+        const keyUp = () =>{
+          document.getElementById('keys').innerHTML = 'Key is Up'
+        }
+
+       </script> -->
+
+    <!-- ****5. input Events in JavaScript  -->
+
+    <div class="main-div">
+      <div>
+        <label for="">Your Name : </label>
+        <input type="text" id="ice" />
+        <br />
+        <label for=""
+          >Choose an ice creame Flavor
+          <select name="iceCreams" id="iceCreams">
+            <option value="">Select One ..</option>
+            <option value="vanilla">Vanilla</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="stawbery">Stawbery</option>
+          </select>
+        </label>
+        <br />
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <script>
+      //  const selectElement = () => {
+
+      //    const inputChange = document.getElementById('ice').value;
+      //    const iceCreams = document.getElementById('iceCreams').value;
+
+      //    console.log(`${inputChange} And  ${iceCreams}`)
+
+      //    const result = document.getElementById('result').innerHTML = `Your Name Is ${inputChange}\nYour Selection is ${iceCreams}`
+
+      //  }
+
+      // ********* USING addEventListener to make a same piece of code so let's begin
+
+      const changer = () => {
+
+        const inputChange = document.getElementById("ice").value;
+        const iceCreams = document.getElementById("iceCreams").value;
+
+        console.log(`${inputChange} And  ${iceCreams}`);
+
+        const result = (document.getElementById(
+          "result"
+        ).innerHTML = `Your Name Is ${inputChange}\nYour Selection is ${iceCreams}`);
+      };
+
+      const iceCreams = document.getElementById("iceCreams");
+
+      iceCreams.addEventListener("change", changer);
+      
+    </script>
+  </body>
+</html>
